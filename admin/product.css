@@ -1,0 +1,127 @@
+/* Reset some default styles for a clean start */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    transition: background-color 0.3s ease;
+}
+
+/* Form container styles */
+form {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 400px;
+    max-width: 100%;
+    animation: fadeIn 0.8s ease-out;
+    transform: translateY(-10px);
+}
+
+/* Heading style */
+form h2 {
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Input, select, and textarea styles */
+form input[type="text"],
+form input[type="number"],
+form input[type="file"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #333;
+    background-color: #fafafa;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Input hover and focus effects */
+form input[type="text"]:hover,
+form input[type="number"]:hover,
+form input[type="file"]:hover,
+form select:hover,
+form textarea:hover,
+form input[type="text"]:focus,
+form input[type="number"]:focus,
+form input[type="file"]:focus,
+form select:focus,
+form textarea:focus {
+    border-color: #fe9126;
+    box-shadow: 0 0 5px #fe9126;
+}
+
+/* Textarea specific styles */
+form textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+/* Submit button styles */
+form input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #fe9126;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+form input[type="submit"]:hover {
+    background-color: #fe9126;
+    transform: translateY(-3px);
+}
+
+form input[type="submit"]:active {
+    background-color: #3e8e41;
+    transform: translateY(0);
+}
+
+/* Label styles */
+form label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+    display: block;
+}
+
+/* Select dropdown styles */
+form select {
+    height: 45px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+/* Animation for form appearance */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

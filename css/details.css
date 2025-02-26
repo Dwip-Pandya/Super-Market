@@ -1,0 +1,192 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Products Section */
+.products {
+    padding: 40px 0;
+}
+
+.agileinfo_single {
+    display: flex;
+    flex-wrap: wrap;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.agileinfo_single_left {
+    flex: 1 1 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.agileinfo_single_left img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.agileinfo_single_right {
+    flex: 1 1 60%;
+    padding: 30px;
+}
+
+/* Product Title */
+.agileinfo_single_right h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #222;
+}
+
+/* Rating Section */
+.rating1 {
+    margin: 15px 0;
+}
+
+.starRating {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.starRating input {
+    display: none;
+}
+
+.starRating label {
+    font-size: 20px;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+}
+
+.starRating input:checked ~ label,
+.starRating label:hover,
+.starRating label:hover ~ label {
+    color: #f1c40f;
+}
+
+/* Description Section */
+.w3agile_description {
+    margin: 20px 0;
+}
+
+.w3agile_description h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #555;
+}
+
+.w3agile_description p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.8;
+}
+
+/* Price Display */
+.snipcart-thumb h4.m-sing {
+    font-size: 24px;
+    font-weight: bold;
+    color: #27ae60;
+    margin-bottom: 20px;
+}
+
+/* Form and Buttons */
+.snipcart-details {
+    margin-top: 20px;
+}
+
+.snipcart-details input[type="number"] {
+    width: 80px;
+    padding: 8px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.snipcart-details .button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 5px 0 0;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #3498db;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+.snipcart-details .button:hover {
+    background-color: #2980b9;
+}
+
+.snipcart-details .button:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+}
+
+/* Login Button */
+.snipcart-details a.button {
+    display: inline-block;
+    text-align: center;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #e74c3c;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.snipcart-details a.button:hover {
+    background-color: #c0392b;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .agileinfo_single {
+        flex-direction: column;
+    }
+
+    .agileinfo_single_left,
+    .agileinfo_single_right {
+        flex: 1 1 100%;
+    }
+
+    .agileinfo_single_right {
+        padding: 20px;
+    }
+
+    .snipcart-details input[type="number"] {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}

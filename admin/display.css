@@ -1,0 +1,126 @@
+/* Resetting some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styling the overall table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards; /* Fade in animation for table */
+}
+
+/* Table header styling */
+th {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px;
+    text-align: left;
+    font-size: 16px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+/* Table cell styling */
+td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transition effects for hover */
+}
+
+/* Styling for product image */
+td img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Image hover transition */
+}
+
+/* Hover effect on images */
+td img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Alternate row colors */
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+/* Hover effect on table rows */
+tr:hover {
+    background-color: #f1f1f1;
+    transform: scale(1.02); /* Slightly scale row on hover */
+    transition: transform 0.3s ease;
+}
+
+/* Styling links inside table */
+a {
+    text-decoration: none;
+    color: #337ab7;
+    transition: color 0.3s ease; /* Transition for link color */
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+/* Styling the entire page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+    animation: fadeIn 2s ease-out forwards; /* Fade in animation for page */
+}
+
+/* Adding a border to the table for more definition */
+table {
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Making the header sticky when scrolling */
+th {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Fade in animation for table */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Slide-in animation for product details */
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+tr td:nth-child(6) {
+    animation: slideIn 0.8s ease-out forwards;
+}
